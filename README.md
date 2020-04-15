@@ -24,28 +24,28 @@ $dAgent->data->os; // Returns the operating system name if available, otherwise 
 $dAgent->data->arch; // Returns the cpu architecture if available, otherwise 'null'
 ```
 
-#### isPhone
+### isPhone
 returns `true` if the user agent is a kind of `Smart Phone`, otherwise returns `false`.
 ```php
 $dAgent = new dAgent();
 if ($dAgent->isPhone) echo 'This device is a smart phone';
 ```
 
-#### isTablet
+### isTablet
 returns `true` if the user agent is a kind of `Tablet`, otherwise returns `false`.
 ```php
 $dAgent = new dAgent();
 if ($dAgent->isTablet) echo 'This device is a tablet';
 ```
 
-#### isDesktop
+### isDesktop
 returns `true` if the user agent is a kind of `Standard Computer`, otherwise returns `false`.
 ```php
 $dAgent = new dAgent();
 if ($dAgent->isDesktop) echo 'This device is a desktop computer';
 ```
 
-#### isUtility
+### isUtility
 returns `true` if the user agent is a kind of utility including `Search Engine Bots`, `Smart TVs`, `Game Consoles` and `Smart Watches`, otherwise returns `false`.
 ```php
 $dAgent = new dAgent();
