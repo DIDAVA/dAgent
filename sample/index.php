@@ -1,5 +1,5 @@
 <?php
 
-require_once '../src/index.php';
+require_once '../class/dAgent.php';
 $dAgent = new dAgent();
 print_r($dAgent);
