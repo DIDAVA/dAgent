@@ -9,25 +9,35 @@
  */
 
 class dAgent {
+  private $headerKey;
+  private $headerStr;
+
   function __construct() {
     $this->headerKey = null;
     $this->headerStr = null;
+    
     $this->isUtility = false;
-    $this->isMobile = false;
+    $this->isPhone = false;
     $this->isTablet = false;
     $this->isDesktop = false;
-    $this->data = (object) [ 'type' => null, 'brand' => null, 'browser' => null, 'os' => null, 'arch' => null ];
+    $this->data = (object) [
+      'type' => null, 
+      'brand' => null, 
+      'browser' => null, 
+      'os' => null, 
+      'arch' => null 
+    ];
     
     $this->getHeader();
     if (!empty($this->headerStr)) {
       $this->scanUtils();
       if (!$this->isUtility) $this->scanPhones();
-      if (!$this->isMobile) $this->scanTablets();
+      if (!$this->isPhone) $this->scanTablets();
       if (!$this->isTablet) {
         $this->isDesktop = true;
         $this->data->type = 'Desktop';
       }
-      if ($this->isMobile || $this->isTablet) {
+      if ($this->isPhone || $this->isTablet) {
         $this->scanMobileBrowsers();
         $this->scanMobileOSs();
       }
@@ -37,19 +47,17 @@ class dAgent {
       }
       $this->scanArch();
     }
-
-    return $this->data;
   }
 
-  function getDB($db) {
+  private function getDB($db) {
     return json_decode( file_get_contents("./db/$db.json") );
   }
 
-  function scan($pattern) {
+  private function scan($pattern) {
     return (bool) preg_match( sprintf('#%s#is', $pattern), $this->headerStr );
   }
 
-  function getHeader() {
+  private function getHeader() {
     foreach ($this->getDB('headers') as $header) {
       if (array_key_exists($header, $_SERVER)) {
         $this->headerKey = $header;
@@ -59,7 +67,7 @@ class dAgent {
     }
   }
 
-  function scanUtils() {
+  private function scanUtils() {
     foreach ($this->getDB('utilities') as $util => $pattern) {
       if ($this->scan($pattern)) {
         $this->data->type = $util;
@@ -68,18 +76,18 @@ class dAgent {
     }
   }
 
-  function scanPhones() {
+  private function scanPhones() {
     foreach ($this->getDB('phones') as $brand => $pattern) {
       if ($this->scan($pattern)) {
-        $this->isMobile = true;
-        $this->data->type = 'Mobile';
+        $this->isPhone = true;
+        $this->data->type = 'Phone';
         $this->data->brand = $brand;
         break;
       }
     }
   }
 
-  function scanTablets() {
+  private function scanTablets() {
     foreach ($this->getDB('tablets') as $brand => $pattern) {
       if ($this->scan($pattern)) {
         $this->isTablet = true;
@@ -90,7 +98,7 @@ class dAgent {
     }
   }
 
-  function scanBrowsers($db) {
+  private function scanBrowsers($db) {
     foreach ($db as $brand => $pattern) {
       if ($this->scan($pattern)) {
         $this->data->browser = $brand;
@@ -99,15 +107,15 @@ class dAgent {
     }
   }
 
-  function scanMobileBrowsers() {
+  private function scanMobileBrowsers() {
     $this->scanBrowsers( $this->getDB('mobilebrowsers') );
   }
 
-  function scanDesktopBrowsers() {
+  private function scanDesktopBrowsers() {
     $this->scanBrowsers( $this->getDB('desktopbrowsers') );
   }
 
-  function scanOSs($db) {
+  private function scanOSs($db) {
     foreach ($db as $os => $pattern) {
       if ($this->scan($pattern)) {
         $this->data->os = $os;
@@ -116,15 +124,15 @@ class dAgent {
     }
   }
 
-  function scanMobileOSs() {
+  private function scanMobileOSs() {
     $this->scanOSs( $this->getDB('mobileos') );
   }
 
-  function scanDesktopOSs() {
+  private function scanDesktopOSs() {
     $this->scanOSs( $this->getDB('desktopos') );
   }
 
-  function scanArch() {
+  private function scanArch() {
     foreach ($this->getDB('architecture') as $arch => $pattern) {
       if ($this->scan($pattern)) {
         $this->data->arch = $arch;
