@@ -1,0 +1,15 @@
+{
+  "Opera": "Opera|OPR\/[.0-9]*",
+  "IE 6": "MSIE 6.0",
+  "IE 7": "MSIE 7.0",
+  "IE 8": "MSIE 8.0|Trident\/4.0",
+  "IE 9": "MSIE 9.0|Trident\/5.0",
+  "IE 10": "MSIE 10.0|Trident\/6.0",
+  "IE 11": "Trident\/7.0",
+  "IE": "MSIE|Trident\/[.0-9]*",
+  "Edge": "Edge|Edge\/[.0-9]*|Edg|Edg\/[.0-9]*",
+  "Safari": "Version\/[.0-9]* Safari\/[.0-9]*",
+  "Firefox": "Firefox\/[.0-9]*",
+  "Chrome": "Chrome\/[.0-9]*",
+  "Netscape": "Netscape"
+}

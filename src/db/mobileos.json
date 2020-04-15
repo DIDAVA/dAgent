@@ -1,0 +1,17 @@
+{
+  "Tizen": "Tizen [.0-9]*",
+  "Android": "Android",
+  "BlackBerryOS": "blackberry|\\bBB10\\b|rim tablet os",
+  "PalmOS": "PalmOS|avantgo|blazer|elaine|hiptop|palm|plucker|xiino",
+  "Symbian": "Symbian|SymbOS|Series60|Series40|SYB-[0-9]+|\\bS60\\b",
+  "WindowsMobile": "Windows CE.*(PPC|Smartphone|Mobile|[0-9]{3}x[0-9]{3})|Windows Mobile|Windows Phone [0-9.]+|WCE;",
+  "WindowsPhone": "Windows Phone 10.0|Windows Phone 8.1|Windows Phone 8.0|Windows Phone OS|XBLWP7|ZuneWP7|Windows NT 6.[23]; ARM;",
+  "iOS": "\\biPhone.*Mobile|\\biPod|\\biPad|AppleCoreMedia",
+  "iPadOS": "CPU OS 13",
+  "MeeGo": "MeeGo",
+  "Maemo": "Maemo",
+  "JavaOS": "J2ME\/|\\bMIDP\\b|\\bCLDC\\b",
+  "webOS": "webOS|hpwOS",
+  "bada": "\\bBada\\b",
+  "BREW": "BREW"
+}

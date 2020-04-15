@@ -1,0 +1,7 @@
+{
+  "Bot": "Googlebot|facebookexternalhit|Google-AMPHTML|s~amp-validator|AdsBot-Google|Google Keyword Suggestion|Facebot|YandexBot|YandexMobileBot|bingbot|ia_archiver|AhrefsBot|Ezooms|GSLFbot|WBSearchBot|Twitterbot|TweetmemeBot|Twikle|PaperLiBot|Wotbox|UnwindFetchor|Exabot|MJ12bot|YandexImages|TurnitinBot|Pingdom|contentkingapp",
+  "MobileBot": "Googlebot-Mobile|AdsBot-Google-Mobile|YahooSeeker\/M1A1-R2D2",
+  "TV": "webOS|WebOS|SmartTV|webOSTV|WEBOS[.0-9]*|NetCast|SonyDTV|HbbTV",
+  "Console": "\\b(Nintendo|Nintendo Wii|Nintendo 3DS|Nintendo Switch|PLAYSTATION|PlayStation|Xbox)\\b",
+  "Watch": "Watch|Watch OS|Watch[0-9],[0-9]|SM-V700"
+}
