@@ -13,7 +13,7 @@ var_dump($dAgent->data); // Show the results
 
 ## Properties
 
-#### data
+### data
 returns an php object with the following properties:
 ```php
 $dAgent = new dAgent();
