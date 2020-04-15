@@ -6,7 +6,7 @@
 ## Usage
 `dAgent` is a standard php class which detects information from HTTP User Agent:
 ```php
-require_once './classes/dAgent.php'; // Import dAgent class file where ever it is
+require_once './class/dAgent.php'; // Import dAgent class file where ever it is
 $dAgent = new dAgent(); // Construct to a new variable
 var_dump($dAgent->data); // Show the results
 ```
