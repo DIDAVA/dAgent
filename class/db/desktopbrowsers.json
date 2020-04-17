@@ -1,4 +1,5 @@
 {
+  "Bot": "Googlebot|facebookexternalhit|Google-AMPHTML|s~amp-validator|AdsBot-Google|Google Keyword Suggestion|Facebot|YandexBot|YandexMobileBot|bingbot|ia_archiver|AhrefsBot|Ezooms|GSLFbot|WBSearchBot|Twitterbot|TweetmemeBot|Twikle|PaperLiBot|Wotbox|UnwindFetchor|Exabot|MJ12bot|YandexImages|TurnitinBot|Pingdom|contentkingapp|Googlebot-Mobile|AdsBot-Google-Mobile|YahooSeeker\/M1A1-R2D2",
   "Opera": "Opera|OPR\/[.0-9]*",
   "IE 6": "MSIE 6.0",
   "IE 7": "MSIE 7.0",
@@ -8,7 +9,7 @@
   "IE 11": "Trident\/7.0",
   "IE": "MSIE|Trident\/[.0-9]*",
   "Edge": "Edge|Edge\/[.0-9]*|Edg|Edg\/[.0-9]*",
-  "Safari": "Version\/[.0-9]* Safari\/[.0-9]*",
+  "Safari": "Version.*Safari.*",
   "Firefox": "Firefox\/[.0-9]*",
   "Chrome": "Chrome\/[.0-9]*",
   "Netscape": "Netscape"

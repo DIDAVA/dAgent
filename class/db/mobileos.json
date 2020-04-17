@@ -1,6 +1,5 @@
 {
   "Tizen": "Tizen [.0-9]*",
-  "Android": "Android",
   "BlackBerryOS": "blackberry|\\bBB10\\b|rim tablet os",
   "PalmOS": "PalmOS|avantgo|blazer|elaine|hiptop|palm|plucker|xiino",
   "Symbian": "Symbian|SymbOS|Series60|Series40|SYB-[0-9]+|\\bS60\\b",
@@ -9,9 +8,10 @@
   "iOS": "\\biPhone.*Mobile|\\biPod|\\biPad|AppleCoreMedia",
   "iPadOS": "CPU OS 13",
   "MeeGo": "MeeGo",
+  "FireOS": "Silk[.0-9]*|Silk-Accelerated",
   "Maemo": "Maemo",
   "JavaOS": "J2ME\/|\\bMIDP\\b|\\bCLDC\\b",
-  "webOS": "webOS|hpwOS",
-  "bada": "\\bBada\\b",
-  "BREW": "BREW"
+  "Bada": "\\bBada\\b",
+  "BREW": "BREW",
+  "Android": "Android"
 }

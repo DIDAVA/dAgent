@@ -1,5 +1,4 @@
 {
-  "Smart TV": "webOSTV|NetCast|SMART-TV|SmartTV|WebOS|webOS|WEBOS[.0-9]*",
   "ChromeOS": "CrOS",
   "BSD": "BSD|OpenBSD|NetBSD",
   "Fedora": "Fedora",
