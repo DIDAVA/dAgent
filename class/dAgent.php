@@ -2,7 +2,7 @@
 
 /*!
  * dAgent v1.0.0
- * (c) 2020 DIDAVA Media
+ * (c) 2020 DIDAVA
  * Released under the MIT License.
  * https://www.didava.ir
  * https://github.com/DIDAVA/dAgent
